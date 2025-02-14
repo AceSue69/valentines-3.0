@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: pink;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        .gif-container img {
+            width: 300px;
+            height: auto;
+            transition: 0.3s ease;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            transition: 0.3s ease;
+            font-family: 'Sacramento', cursive;
+            border-radius: 20px;
+        }
+        #yes {
+            background-color: red;
+            color: white;
+        }
+        #no {
+            background-color: gray;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lovieeeeee!!!!! Will You Be My Valentine? ❤️</h1>
+    <div class="gif-container">
+        <img id="cat.gif" src="cat.gif" alt="cat-heart.gif">
+    </div>
+    <div class="buttons">
+        <button id="yes" onclick="acceptLove()">Yes</button>
+        <button id="no" onclick="declineLove()">No</button>
+    </div>
+    <script>
+        let yesSize = 20;
+        let noSize = 20;
+        const gifs = ["cat.gif", "sadpepe.gif", "cat-heart.gif"];
+
+        function declineLove() {
+            noSize -= 5;
+            yesSize += 15;
+            document.getElementById("no").style.fontSize = noSize + "px";
+            document.getElementById("yes").style.fontSize = yesSize + "px";
+            document.getElementById("cat.gif").src = gifs[1];
+        }
+
+        function acceptLove() {
+            document.body.innerHTML = '<h1>Yay! ❤️ Happy Valentine\'s Day bbyyyyyyyyy! </h1>' +
+                                      '<img src="' + gifs[2] + '" width="300px">' +
+                                      '<br><button id="newLinkBtn" onclick="openLink()">Wanna See Something Special?</button>';
+        }
+
+        function openLink() {
+            window.location.href = 'https://l.messenger.com/l.php?u=https%3A%2F%2Fvalentinesformybby.carrd.co%2F&h=AT3LWZ0rRuuVl0UIW0huHArgjb8yshZeC44cpQ93i7sN1SYuLCziGtKda2pOvLzRC958z2OGfW2J7FbtaFrT0Stl5EdY712lY7Hkg2U88yZBODcBVkE3MqYVclEP2lWjmREmLQ';
+        }
+    </script>
+</body>
+</html>
